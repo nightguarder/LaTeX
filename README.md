@@ -5,6 +5,8 @@
   - [Zápočet](#zápočet)
   - [Přednášky](#přednášky)
   - [Cvičení](#cvičení)
+  - [Notes](#notes)
+    - [Typografické minimum](#typografické-minimum)
   - [Setup](#setup)
     - [Requirements:](#requirements)
 
@@ -31,6 +33,19 @@ K udělení zápočtu je nutné odevzdat:
 - Úvod do LaTeXu
 - Speciální znaky a práce s písmem
 - Obrázky a tabulky...
+
+## Notes
+### Typografické minimum 
+- [Dokument s poznámky](/PDF/Learning/Typografické%20min.%2014. 10. 2024.pdf)
+- Před odevzdáním práce si zkontrolovat chyby a dodržovat pravidla z tohoto dokumentu. Vyvaruješ se tak opak. vrácení práce.
+- Pro kontrolu použít [typopo.org](https://app.typopo.org)
+  - stará se o psaní *správných* uvozovek, mezer, zkratek atd.
+  
+  ```json
+  "Den Mikuláše biskupa a vyznavače. Ješek sládek z Krumlova." 
+  --> oprava
+  „Den Mikuláše biskupa a vyznavače. Ješek sládek z Krumlova."
+  ```
 
 ## Setup
 - Configure LateX in VSCode or use online editor [Overleaf](https://www.overleaf.com/project)
