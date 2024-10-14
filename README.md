@@ -25,7 +25,7 @@ K udělení zápočtu je nutné odevzdat:
 ## Přednášky
 
 - Úvod, klasifikace písem
-- Vlastnosti písem, volba písma
+- 2. Vlastnosti písem, volba písma [Konflikt písmen](/PDF/Prednasky/prednaska2%20-%20volba%20pisma.pdf)
 - Principy sazby a další...
 
 ## Cvičení
