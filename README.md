@@ -12,8 +12,11 @@
 
 ## Struktura složek
 
-- **Přednášky**: PDF/Prednasky
-- **Cvičení**: PDF/Cviceni
+__Přednášky__: [PDF/Prednasky](/PDF/Prednasky/)
+
+__Cvičení__: [PDF/Cviceni](/PDF/Cviceni/)
+
+__Materiály__: [PDF/Learning](/PDF/Learning/)
 
 ## Zápočet
 
@@ -22,11 +25,13 @@ K udělení zápočtu je nutné odevzdat:
 - Text musí splňovat typografické konvence a obsahovat: obsah, seznam literatury, obrázek nebo tabulku.
 - Odevzdat PDF a zdrojové soubory do konce března 2024.
 
+__Solution:__
+- Seminární práce přepsat z Docs do Texu
 ## Přednášky
 
 - Úvod, klasifikace písem
 - 2. Vlastnosti písem, volba písma [Konflikt písmen](/PDF/Prednasky/prednaska2%20-%20volba%20pisma.pdf)
-- Principy sazby a další...
+- 3. Principy sazby, interpunkce, pomlčky, data ... [Principy sazby](/PDF/Prednasky/prednaska3%20-%20princpi%20sazby.pdf)
 
 ## Cvičení
 
