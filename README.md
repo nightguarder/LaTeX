@@ -6,6 +6,7 @@
   - [Přednášky](#přednášky)
   - [Cvičení](#cvičení)
   - [Notes](#notes)
+    - [Prednaska 4](#prednaska-4)
     - [Typografické minimum](#typografické-minimum)
   - [Setup](#setup)
     - [Requirements:](#requirements)
@@ -40,6 +41,9 @@ __Solution:__
 - Obrázky a tabulky...
 
 ## Notes
+
+### Prednaska 4 
+- [Poznamky z prednasky](/Notes/Prednáška4.md)
 ### Typografické minimum 
 - [Dokument s poznámky](/PDF/Learning/Typografické%20min.%2014. 10. 2024.pdf)
 - Před odevzdáním práce si zkontrolovat chyby a dodržovat pravidla z tohoto dokumentu. Vyvaruješ se tak opak. vrácení práce.
