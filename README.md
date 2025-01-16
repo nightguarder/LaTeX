@@ -44,8 +44,10 @@ __Solution:__
 
 ### Prednaska 4 
 - [Poznamky z prednasky](/Notes/Prednáška4.md)
+### Prednaska 5
+- [Poznamky z Prednasky]()
 ### Typografické minimum 
-- [Dokument s poznámky](/PDF/Learning/Typografické%20min.%2014. 10. 2024.pdf)
+- [Dokument s poznámky](/PDF/Learning/Typografické_minimum_2024.pdf)
 - Před odevzdáním práce si zkontrolovat chyby a dodržovat pravidla z tohoto dokumentu. Vyvaruješ se tak opak. vrácení práce.
 - Pro kontrolu použít [typopo.org](https://app.typopo.org)
   - stará se o psaní *správných* uvozovek, mezer, zkratek atd.
