@@ -1,0 +1,48 @@
+\documentclass{article}
+
+% Required packages
+\usepackage{graphicx}        % For inserting images
+\usepackage{hyperref}        % For hyperlinks
+\usepackage{polyglossia}     % For multilingual support
+\usepackage{setspace}        % For spacing control
+\usepackage{amsmath}         % For mathematical formulas
+\usepackage{amsfonts}        % For mathematical fonts
+
+% Set the default language to Czech
+\setdefaultlanguage{czech}
+
+% Bibliography file (adjust the filename accordingly)
+\usepackage[backend=biber]{biblatex}
+\addbibresource{references.bib}
+
+% Title and Author
+\title{Název Semestrální Práce}
+\author{Jméno Studenta}
+
+\begin{document}
+
+% Title page
+\maketitle
+
+\newpage
+
+% Table of contents
+\tableofcontents
+
+% Introduction
+\newpage
+\section{Úvod}
+Toto je úvodní část semestrální práce. Zde by měl být stručně popsán obsah práce a cíle, kterých má být dosaženo.
+\cite{sample-reference}
+
+
+% Bibliography section
+\newpage
+\section*{Bibliografie}
+\printbibliography[heading=bibintoc]
+
+% Seznam obrázků
+\newpage
+\listoffigures
+
+\end{document}
