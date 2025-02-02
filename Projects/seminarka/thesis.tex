@@ -10,39 +10,35 @@
 \usepackage{amsmath}        
 \usepackage{amsfonts}       
 \usepackage{amsthm}         
-\usepackage{bm}             
+\usepackage{bm}
+
 
 % Obrazky
 \usepackage{graphicx}
 \newcommand{\FIGURES}{./res} %cesta k adresáři s obrázky
 
 % Bibtex + Biber 
-\usepackage[backend=biber,style=numeric,style=iso-authoryear, autolang=other]{biblatex}
+\usepackage[backend=biber,style=iso-authoryear, autolang=other]{biblatex}
 \addbibresource{references.bib}
 
 % Typograficke minimum
-\ifx
-\uv\undefined
-\newcommand{\uv}[1]{\enquote{#1}} % Definice makra pro sazbu českých uvozovek
-\fi
 
-\usepackage{parskip} % Vertical space between paragraphs
-\setlength{\parindent}{1.5em} % First line indentation
+\usepackage{csquotes} % doporučuje se pro biblatex
+\usepackage{microtype}
+\usepackage{parskip} % odstavce bez odsazení, ale s odstupem
 
 % Nastaveni odkazu
 \usepackage[unicode]{hyperref} % generovani odkazu v PDF
 \hypersetup{pdftitle=Název práce, 
-            pdfauthor=Jméno Příjmení
-            ps2pdf,
+            pdfauthor=Jméno Příjmení,
             colorlinks=false,
             urlcolor=blue,
             pdfstartview=FitH,
             pdfpagemode=UseOutlines,
             pdfnewwindow,
-            breaklinks                      %% zajistí, aby se dlouhé hyperodkazy mohly lámat přes více řádků
+            breaklinks  %% zajistí, aby se dlouhé hyperodkazy mohly lámat přes více řádků
 }
-\usepackage[nottoc]{tocbibind} % Literatura v obsahu
-
+\usepackage[nottoc]{tocbibind} % Automatically adds the bibliography and/or the index and/or the contents, etc., to the Table of Contents listing.
 
 \begin{document}
 
@@ -50,6 +46,11 @@
 \include{title}
 %Obsah
 \include{obsah}
+
+%Kapitoly
+%Uvod
+\include{uvod}
+
 
 
 %Seznam literatury
