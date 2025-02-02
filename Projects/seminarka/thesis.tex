@@ -1,48 +1,65 @@
-\documentclass{article}
+\documentclass[12pt,a4paper,oneside]{article}
 
-% Required packages
-\usepackage{graphicx}        % For inserting images
-\usepackage{hyperref}        % For hyperlinks
-\usepackage{polyglossia}     % For multilingual support
-\usepackage{setspace}        % For spacing control
-\usepackage{amsmath}         % For mathematical formulas
-\usepackage{amsfonts}        % For mathematical fonts
-
-% Set the default language to Czech
+% Polyglossia 
+\usepackage{polyglossia}
 \setdefaultlanguage{czech}
+\usepackage{fontspec}
+\setmainfont{Times New Roman} % nebo jiný Unicode font
 
-% Bibliography file (adjust the filename accordingly)
-\usepackage[backend=biber]{biblatex}
+% Matematické znaky
+\usepackage{amsmath}        
+\usepackage{amsfonts}       
+\usepackage{amsthm}         
+\usepackage{bm}             
+
+% Obrazky
+\usepackage{graphicx}
+\newcommand{\FIGURES}{./res} %cesta k adresáři s obrázky
+
+% Bibtex + Biber 
+\usepackage[backend=biber,style=numeric,style=iso-authoryear, autolang=other]{biblatex}
 \addbibresource{references.bib}
 
-% Title and Author
-\title{Název Semestrální Práce}
-\author{Jméno Studenta}
+% Typograficke minimum
+\ifx
+\uv\undefined
+\newcommand{\uv}[1]{\enquote{#1}} % Definice makra pro sazbu českých uvozovek
+\fi
+
+\usepackage{parskip} % Vertical space between paragraphs
+\setlength{\parindent}{1.5em} % First line indentation
+
+% Nastaveni odkazu
+\usepackage[unicode]{hyperref} % generovani odkazu v PDF
+\hypersetup{pdftitle=Název práce, 
+            pdfauthor=Jméno Příjmení
+            ps2pdf,
+            colorlinks=false,
+            urlcolor=blue,
+            pdfstartview=FitH,
+            pdfpagemode=UseOutlines,
+            pdfnewwindow,
+            breaklinks                      %% zajistí, aby se dlouhé hyperodkazy mohly lámat přes více řádků
+}
+\usepackage[nottoc]{tocbibind} % Literatura v obsahu
+
 
 \begin{document}
 
-% Title page
-\maketitle
+%Titulní strana
+\include{title}
+%Obsah
+\include{obsah}
 
+
+%Seznam literatury
 \newpage
+\section*{Seznam literatury}
+\addcontentsline{toc}{section}{Seznam literatury}
+\printbibliography[heading=none]
 
-% Table of contents
-\tableofcontents
-
-% Introduction
+%Seznam obrázků
 \newpage
-\section{Úvod}
-Toto je úvodní část semestrální práce. Zde by měl být stručně popsán obsah práce a cíle, kterých má být dosaženo.
-\cite{sample-reference}
-
-
-% Bibliography section
-\newpage
-\section*{Bibliografie}
-\printbibliography[heading=bibintoc]
-
-% Seznam obrázků
-\newpage
-\listoffigures
+\listoffigures  
 
 \end{document}
