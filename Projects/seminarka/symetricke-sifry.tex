@@ -14,3 +14,29 @@ Hlavním problémem těchto systémů však stále zůstává: Jak můžeme bezp
 Distribuce klíčů je základní problémem při používání symetrických šifer, protože pro šifrování a dešifrování se používá stejný tajný klíč. Bezpečnost komunikace mezi odesílatelem a příjemcem závisí na uchování tajnosti tohoto klíče, jelikož pokud by neoprávněná strana získala onen klíč, mohla by snadno tuto komunikaci odposlouchávat.
 
 Představme si situaci, kdy klient (například webový prohlížeč) se pokouší získat přístup k serveru a je třeba zabezpečit tento komunikační kanál. Data, která jsou mezi stranami sdílena, jsou většinou většího objemu a komunikace probíhá neustále, takže není efektivní používat asymetrickou kryptografii. K tomu, aby mohl klient a server bezpečně komunikovat, je třeba vyměnit tajný klíč tzv. secret key \mbox{\textcite{wikijs2024}}. Vzniká zde otázka: Jak bezpečně vyměnit tajný klíč přes nezabezpečený kanál, jako je transportní vrstva sítě? Jedním z efektivních řešení je právě Diffie-Hellmanův protokol, jenž je využíván napříč mnoha kryptografickými protokoly.
+\subsection{Diffie-Hellmanův protokol}
+
+Jak uvádí \textcite{diffie1976}, princip tohoto protokolu spočívá ve vytvoření bezpečného klíče mezi dvěma stranami bez nutnosti předchozího sdílení tajných klíčů. Tento proces umožňuje stranám (např. klientovi a serveru) bezpečně vyměnit si šifrovací klíče přes veřejný kanál a zajistit tak důvěrnost při komunikaci.
+
+Princip funkce výměny klíčů dle \textcite{diffie1976}, by šel popsat následujícím způsobem: 
+
+\begin{enumerate}
+    \item \textbf{Volba veřejných parametrů:} Obě strany si zvolí dvě veřejné hodnoty, které jsou známé všem účastníkům komunikace. Tyto hodnoty jsou označeny jako \(g\) (základna) a \(n\) (modul). Parametry musí být vybrány tak, aby zaručovaly bezpečnost celého protokolu.
+    
+    \item \textbf{Výběr tajných čísel:} Každá strana si poté náhodně vybere své vlastní tajné číslo. Konkrétně klient zvolí tajné číslo \(a\) a server tajné číslo \(b\). Tato čísla zůstávají důvěrná a nejsou nikdy zveřejněna.
+    
+    \item \textbf{Výpočet veřejných hodnot:} Na základě svých tajných čísel a veřejných parametrů obě strany spočítají své veřejné hodnoty. Klient vypočítá \(A = g^a \mod n\) a server \(B = g^b \mod n\). Tyto hodnoty jsou následně vyměněny mezi stranami.
+    
+    \item \textbf{Vytvoření sdíleného klíče:} Po výměně veřejných hodnot každá strana využije své tajné číslo a přijatou veřejnou hodnotu k výpočtu sdíleného klíče. Klient vypočítá \(s = B^a \mod n\) a server \(s = A^b \mod n\). Díky vlastnostem modulární aritmetiky jsou obě vypočítané hodnoty shodné, čímž obě strany získají stejný sdílený tajný klíč.
+  \end{enumerate}
+
+I když jsou veřejné hodnoty \(A\) a \(B\) přenášeny přes nechráněný kanál, zpětné určení tajných čísel \(a\) a \(b\) je extrémně náročné. Tento problém, známý jako problém diskrétního logaritmu, má pro klasické počítače exponenciální složitost. To znamená, že výpočet je s rostoucí velikostí čísel extrémně časově náročný. Potenciální hrozbou mohou být jen kvantové počítače, které by mohly pomocí specifických algoritmů, jako je Shorův algoritmus popsaný více v kapitole \hyperref[sec:postkvantova-kryptografie]{Postkvantová kryptografie}, snížit výpočetní složitost tohoto problému na polynomiální úroveň.
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=1\textwidth]{\FIGURES/diffie-hellman-1.jpeg}
+    \caption{Schéma Diffie-Hellmanova protokolu. Zdroj: \parencite{diffie-hellman-1}}
+    \label{fig:diffie-hellman}
+  \end{figure}
+
+\newpage
