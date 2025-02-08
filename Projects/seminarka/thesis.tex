@@ -18,7 +18,7 @@
 \newcommand{\FIGURES}{./res} %cesta k adresáři s obrázky
 
 % Bibtex 
-\usepackage[backend=biber,style=iso-authoryear, autolang=other]{biblatex}
+\usepackage[backend=biber,style=iso-authoryear, autolang=other, maxnames=2, minnames=1]{biblatex}
 \addbibresource{references.bib}
 
 % Typograficke minimum
@@ -26,7 +26,9 @@
 \usepackage{csquotes} % doporučuje se pro biblatex
 \usepackage{microtype}
 \usepackage{parskip} % odstavce bez odsazení, ale s odstupem
-
+\hyphenpenalty=1000  % Mírná penalizace za dělení slov
+\widowpenalty=10000   % Zákaz vdov a sirotků
+\emergencystretch=2em % Mírně tolerantnější mezery
 % Nastaveni odkazu
 \usepackage[unicode]{hyperref} % generovani odkazu v PDF
 \hypersetup{pdftitle=Název práce, 
@@ -52,6 +54,8 @@
 \include{uvod}
 %Kryptografie
 \include{kryptografie}
+%Symetrické šifry
+\include{symetricke-sifry}
 %Asymetrické šifry
 %\include{asymetricke-sifry}
 
