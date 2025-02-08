@@ -16,6 +16,7 @@
 % Obrazky
 \usepackage{graphicx}
 \newcommand{\FIGURES}{./res} %cesta k adresáři s obrázky
+\newcommand{\CHAPTERS}{./src} %cesta k adresáři s kapitolami
 
 % Bibtex 
 \usepackage[backend=biber,style=iso-authoryear, autolang=other, maxnames=2, minnames=1]{biblatex}
@@ -47,17 +48,17 @@
 %Titulní strana
 \include{title}
 %Obsah
-\include{obsah}
+\include{\CHAPTERS/obsah}
 
 %Kapitoly
 %Uvod
-\include{uvod}
+\include{\CHAPTERS/uvod}
 %Kryptografie
-\include{kryptografie}
+\include{\CHAPTERS/kryptografie}
 %Symetrické šifry
-\include{symetricke-sifry}
+\include{\CHAPTERS/symetricke-sifry}
 %Asymetrické šifry
-%\include{asymetricke-sifry}
+\include{\CHAPTERS/asymetricke-sifry}
 
 
 
