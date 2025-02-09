@@ -14,7 +14,9 @@ Hlavním problémem těchto systémů však stále zůstává: Jak můžeme bezp
 Distribuce klíčů je základní problémem při používání symetrických šifer, protože pro šifrování a dešifrování se používá stejný tajný klíč. Bezpečnost komunikace mezi odesílatelem a příjemcem závisí na uchování tajnosti tohoto klíče, jelikož pokud by neoprávněná strana získala onen klíč, mohla by snadno tuto komunikaci odposlouchávat.
 
 Představme si situaci, kdy klient (například webový prohlížeč) se pokouší získat přístup k serveru a je třeba zabezpečit tento komunikační kanál. Data, která jsou mezi stranami sdílena, jsou většinou většího objemu a komunikace probíhá neustále, takže není efektivní používat asymetrickou kryptografii. K tomu, aby mohl klient a server bezpečně komunikovat, je třeba vyměnit tajný klíč tzv. secret key \mbox{\textcite{wikijs2024}}. Vzniká zde otázka: Jak bezpečně vyměnit tajný klíč přes nezabezpečený kanál, jako je transportní vrstva sítě? Jedním z efektivních řešení je právě Diffie-Hellmanův protokol, jenž je využíván napříč mnoha kryptografickými protokoly.
+
 \subsection{Diffie-Hellmanův protokol}
+\label{sec:diffie-hellman}
 
 Jak uvádí \textcite{diffie1976}, princip tohoto protokolu spočívá ve vytvoření bezpečného klíče mezi dvěma stranami bez nutnosti předchozího sdílení tajných klíčů. Tento proces umožňuje stranám (např. klientovi a serveru) bezpečně vyměnit si šifrovací klíče přes veřejný kanál a zajistit tak důvěrnost při komunikaci.
 
