@@ -62,4 +62,11 @@ Asymetrická kryptografie hraje tedy významnou roli v vytváření klíčů a p
 Nevýhodou asymetrické kryptografie může být nižší rychlost šifrování oproti symetrickým šifrám, což ji činí nevhodnou pro přímé šifrování velkých bloků dat. Proto se asymetrická kryptografie často využívá v kombinaci se symetrickou, například při výměně klíčů v hybridních šifrovacích systémech.
 
 V praxi se tak nejčastěji můžeme setkat s kombinací algoritmů ECDSA nebo EDDSA, který používají pro generování klíče Eliptické křivky (EC). Šifra DSA se od RSA prakticky neliší, pouze používá problém diskrétního logaritmu (viz. \hyperref[sec:diffie-hellman]{Diffie-Helmannův protokol}) k generování páru klíčů. Ve výsledku je rozdíl mezi těmito algoritmy v rychlosti, nikoli v bezpečnosti. Funkčně, kde RSA a DSA vyžadují klíče velikosti 3072 bitů k dosažení požadované úrovně bezpečnosti, ECDSA toho dosahuje pouze s klíči o délce 256-bitů \parencite{kontsevoy2020}.
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=1\textwidth]{\FIGURES/elliptic-curve-cryptography-1.jpeg}
+    \caption{Eliptická křivka znázorněna matematickou funkcí. Zdroj: \parencite{eliptic-curve-1}}
+    \label{fig:elliptic-curve-cryptography}
+  \end{figure}
 \newpage

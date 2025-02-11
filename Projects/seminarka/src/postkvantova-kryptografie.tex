@@ -1,0 +1,29 @@
+\section{Postkvantová kryptografie}
+\label{sec:postkvantova-kryptografie}
+V posledních letech rostou obavy,že kvantové počítače, které mají potenciál řešit složité problémy exponenciálně rychleji než klasické počítače, mohou představovat vážnou hrozbu pro současné šifrovací algoritmy. Kvantové počítače využívají jevy jako kvantová superpozice a kvantové provázání, což jim umožňuje zpracovávat informace způsobem, který je pro klasické počítače nedosažitelný. Tato schopnost by mohla ohrozit bezpečnost asymetrických šifrovacích algoritmů, jako jsou RSA nebo ECC, které zajišťují bezpečnost většiny online komunikace, a které by mohly bít kvantovými počítači prolomeny během několika minut \parencite{qubits2024}.
+
+Podle některých odborníků je však tento problém ještě vzdálený 5-15 let, i když se již vyskytují první velké pokroky v této oblasti. Například Google nedávno představil kvantový čip Willow, který je schopen provádět výpočty, jež by pro současné superpočítače byly nedosažitelné. Nicméně tento čip má zatím pouze 105 fyzických qubitů, což je stále daleko od milionů qubitů potřebných k prolomení moderních šifrovacích standardů, jako je RSA. Odhady naznačují, že prolomení RSA šifrování pomocí kvantových počítačů je vzdálené minimálně deset let a vyžadovalo by přibližně 4 miliony fyzických qubitů \parencite{qubits2024}.
+
+V této kapitole budou stručně naznačeny hrozby a výzvy, které kvantové počítače přinášejí pro současnou kryptografii, a budou diskutovány současné snahy o vývoj postkvantových kryptografických algoritmů, které by měly zajistit bezpečnost dat i v sféře kvantových výpočtů.
+
+\subsection{Shorův algoritmus}
+Shorův algoritmus je algoritmus navržený specificky pro kvantové počítače. Algoritmus jenž má za cíl efektivní faktorizaci velkých čísel, vytváří budoucí hrozbu pro bezpečnost šifer, jako je RSA, a tím i šifry, které spoléhají na tento matematický NP-úplný problém.
+
+Nejnovější výzkumy ukazují, že Shorův algoritmus je stále ve fázi experimentálního vývoje. Ačkoliv byl algoritmus navržen pro kvantové počítače s tisíci qubity, první experimenty dosáhli pokroku na menších číselných příkladech. Například studie z roku 2021 popisuje funkční koncept Shorova algoritmu implementovaného na kvantovém počítači s pouhými 7 qubity, kde bylo úspěšně provedeno rozklad čísla \[N = 21\] na prvočísla. Tento důkaz konceptu ukazuje, že efektivní implementace Shorova algoritmu je prozatím možná jen pro malá čísla N, s malým počtem q-bitů \parencite{skosana2021}.
+
+V současné době je významnou událostí v oblasti postvantové kryptografie, zveřejnění prvních třech standardů (kandidátů) pro psotkvantovou kryptografii dle institutu NIST (National Institute of Standards and Technology). Zveřejněné algoritmy by mohly představovat bezpečnou ochranu šifrovaných dat před výpočetní mohutností budoucích kvantových počítačů. Standardy jsou navrženy pro dva klíčové typy aplikací: obecné šifrování pro zabezpečení dat během přenosu a digitální podpisy pro ověřování identity \parencite{nist2024}.
+
+\subsection{Michel Mosca theorem}
+Michele Mosca je známý matematik a informatik, který aktuálně působí jako profesor na Univerzitě ve Waterloo (USA) a je spoluzakladatelem fakulty zaměřené na kvantovou výpočetní techniku. Dosud v průběhu své kariéry významně přispěl do výzkumu v této oblasti \parencite{mosca2023}.
+
+Za zmínku stojí právě následující rovnice \textcite{mosca2023}, která upozorňuje na fakt, že bezpečnost současných šifrovacích systémů závisí na překryvu životnosti těchto systémů a nástupu kvantových počítačů:
+\begin{equation}
+X + Y > Z
+\end{equation}
+kde:
+\begin {description}
+\item[$Z$] - Doba, za kterou bude k dispozici efektivní kvantový počítač.
+\item[$Y$] - Doba potřebná k implementaci kvantově odolné šifry v rámci stávajícího systému.
+\item[$X$] - Doba, po kterou chceme tajnou informaci uchovat v utajení.
+\end {description}
+\newpage

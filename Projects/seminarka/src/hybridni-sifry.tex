@@ -14,7 +14,14 @@ Prvním krokem je, že klient obdrží veřejný klíč serveru, který je obvyk
 
 Po dokončení procesu TLS handshake, používají obě strany stejné session keys (klíče relace) pro šifrování dat. Jakmile jsou klíče relace aktivní, veřejné a soukromé klíče již nejsou dále používány, jelikož nejsou nutné k ověření autenticity. Klíče relace jsou dočasné klíče, které jsou využívány pouze během jedné relace a po jejím ukončení již nejsou znovu použity. Pro každou novou relaci je vytvořen nový, náhodně generovaný pár klíčů relace.
 
-To však může být i jinak, například v případě takzvaného session resumption (obnovení relace). Tento mechanismus umožňuje serveru uchovávat šifrovací klíče po určitou dobu, čímž se eliminuje nutnost opětovného provádění celého TLS handshake při každém novém spojení.
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.8\textwidth]{\FIGURES/symmetric-encryption.jpg}
+    \caption{Schéma symetrického šifrování. Zdroj: \parencite{cloudflare2024}}
+    \label{fig:symmetric-encryption}
+\end{figure}
+
+Existují však i jiné způsoby relace, například v případě takzvaného session resumption (obnovení relace). Tento mechanismus umožňuje serveru uchovávat šifrovací klíče po určitou dobu, čímž se eliminuje nutnost opětovného provádění celého TLS handshake při každém novém spojení.
 
 Podle dokumentace GnuTLS \textcite{gnutls2024}, existují dva hlavní způsoby obnovení relace:
 \begin {enumerate}
@@ -27,4 +34,6 @@ Proto moderní verze TLS, jako TLS 1.3, preferují ephemeral key exchange (pomí
 
 Druhým příkladem hybridního šifrovacího systému je technologie S/MIME, která se využívá pro zabezpečení e-mailové komunikace. Při použití S/MIME odesílatel nejprve digitálně podepíše email svým soukromým klíčem, čímž zajistí, že příjemce může ověřit autenticitu zprávy pomocí veřejného klíče odesílatele. Současně se pro samotné šifrování obsahu zprávy využívá symetrický klíč, který je následně bezpečně předán příjemci za použití asymetrického šifrovacího algoritmu. Tímto způsobem se spojují výhody asymetrické kryptografie a efektivity symetrického šifrování.
 Výsledkem je systém, který nejen-že chrání důvěrnost odeslaných zpráv, ale také zaručuje integritu a nepopiratelnost komunikace mezi odesílatelem a příjemcem. Tento přístup se osvědčuje zejména v korporátním prostředí a v aplikacích, kde je klíčová bezpečnost e-mailové komunikace \parencite{cloudflare2024}.
+
+
 \newpage
