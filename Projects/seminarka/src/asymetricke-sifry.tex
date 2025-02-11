@@ -60,9 +60,9 @@ Dalším významným využitím asymetrické kryptografie je v případě elektr
 
 Asymetrická kryptografie hraje tedy významnou roli v vytváření klíčů a podepisování transakcí. Nutno podotknout, že ze znalosti veřejného klíče, je výpočetně složité nalézt klíč privátní. Tento typ asymetrické kryptografie je založena na problému diskrétního logaritmu vyjádřeného sčítáním a násobením bodů na eliptické křivce \parencite{antonopoulos2014}.
 
-Nevýhodou asymetrické kryptografie může být nižší rychlost šifrování oproti symetrickým šifrám, což ji činí nevhodnou pro přímé šifrování velkých bloků dat. Proto se asymetrická kryptografie často využívá v kombinaci se symetrickou, například při výměně klíčů v hybridních šifrovacích systémech.
+Nevýhodou asymetrické kryptografie může být nižší rychlost šifrování oproti symetrickým šifrám, což ji činí nevhodnou pro přímé šifrování velkých bloků dat. Proto se asymetrická kryptografie často využívá v kombinaci se symetrickou, \mbox{například} při výměně klíčů v hybridních šifrovacích systémech.
 
-V praxi se tak nejčastěji můžeme setkat s kombinací algoritmů ECDSA nebo \mbox{EDDSA}, který používají pro generování klíče Eliptické křivky (dále jen EC). Šifra DSA se od RSA prakticky neliší, pouze používá problém diskrétního logaritmu (viz. \hyperref[sec:diffie-hellman]{Diffie-Helmannův protokol}) k generování páru klíčů. Ve výsledku je rozdíl mezi těmito algoritmy v rychlosti, nikoli v bezpečnosti. Funkčně, kde RSA a DSA vyžadují klíče velikosti 3072~bitů k dosažení požadované úrovně bezpečnosti, \mbox{ECDSA} toho dosahuje pouze s klíči o délce 256-bitů \parencite{kontsevoy2020}.
+V praxi se tak nejčastěji můžeme setkat s kombinací algoritmů ECDSA nebo \mbox{EDDSA}, který používají pro generování klíče Eliptické křivky (dále jen EC). Šifra DSA se od RSA prakticky neliší, pouze používá problém diskrétního logaritmu (viz. \hyperref[sec:diffie-hellman]{Diffie-Helmannův protokol}) k generování páru klíčů. Ve výsledku je rozdíl mezi těmito algoritmy v rychlosti, nikoli v bezpečnosti. Funkčně, kde RSA a DSA vyžadují klíče velikosti 3072~bitů k dosažení požadované úrovně bezpečnosti, \mbox{ECDSA} toho dosahuje pouze s klíči o délce 256-bitů \mbox{\parencite{kontsevoy2020}.}
 
 \begin{figure}[htbp]
     \centering
