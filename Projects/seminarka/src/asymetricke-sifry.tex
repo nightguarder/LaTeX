@@ -47,7 +47,7 @@ Dle \textcite{rsa1978} je princip šifrování následující postup:
     \end{itemize}
 \end{enumerate}
 
-Přestože veřejný klíč \((n, e)\) je znám, bez znalosti velkých prvočísel \( p \) a \( q \) (délky alespoň 2048~bitů), je výpočetně velmi složité získat soukromý klíč \((n, d)\). Tento bezpečnostní předpoklad vychází z faktu, že faktorizace čísla \( n \) na jeho prvočinitele je výpočetně velmi náročný úkol - tzv. NP-těžký problém, který má exponenciální složitost pro klasické výpočetní prostředky \parencite{tesar2021}.  
+Přestože veřejný klíč \((n, e)\) je znám, bez znalosti velkých prvočísel \( p \) a \( q \) (délky alespoň 2048~bitů), je výpočetně velmi složité získat soukromý klíč \((n, d)\). Tento bezpečnostní předpoklad vychází z faktu, že faktorizace čísla \( n \) na jeho prvočinitele je výpočetně velmi náročný úkol~-- tzv. NP-těžký problém, který má exponenciální složitost pro klasické výpočetní prostředky \parencite{tesar2021}.  
 
 \label{sec:asymetricka-kryptografie}
 Jedním z nejvýznamnějších využití tohoto kryptografického protokolu jsou digitální podpisy, které umožňují ověřovat jak autentifikaci, tak i integritu dat. V tomto procesu soukromý klíč slouží k podepsání zprávy, čímž garantuje její původ a nezaměnitelnost, zatímco veřejný klíč příjemci umožňuje ověřit, že zpráva pochází od oprávněného odesílatele a nebyla nijak pozměněna během přenosu třetí stranou.
